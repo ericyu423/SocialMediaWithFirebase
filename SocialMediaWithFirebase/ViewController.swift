@@ -9,13 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+ 
+    private let heightPhotoButton:CGFloat = 150
     
-    lazy var photoButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.layer.cornerRadius = self.view.frame.size.height/2
-        button.layer.borderWidth = 1
+     lazy var photoButton: UIButton = {
+        var button = UIButton()
+        button.backgroundColor = .white
+        button.layer.cornerRadius = heightPhotoButton/2
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.darkGray.cgColor
         button.setTitle("Photo", for: .normal)
+        button.setTitleColor(UIColor.darkGray, for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -41,8 +45,8 @@ class ViewController: UIViewController {
     func addAutoConstraintToSubviews(){
         
         NSLayoutConstraint.activate([
-            photoButton.heightAnchor.constraint(equalToConstant: 140),
-            photoButton.widthAnchor.constraint(equalToConstant: 140),
+            photoButton.heightAnchor.constraint(equalToConstant: heightPhotoButton),
+            photoButton.widthAnchor.constraint(equalToConstant: heightPhotoButton),
             photoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             photoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40)
         ])
