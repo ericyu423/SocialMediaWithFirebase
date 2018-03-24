@@ -9,17 +9,53 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    lazy var photoButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .red
+        button.layer.cornerRadius = self.view.frame.size.height/2
+        button.layer.borderWidth = 1
+        button.setTitle("Photo", for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let emailTextField: UITextField = { x in
+        let tf = UITextField()
+        tf.placeholder = x;
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }("Email")
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.addSubview(photoButton)
+        addAutoConstraintToSubviews()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func addAutoConstraintToSubviews(){
+        
+        NSLayoutConstraint.activate([
+            photoButton.heightAnchor.constraint(equalToConstant: 140),
+            photoButton.widthAnchor.constraint(equalToConstant: 140),
+            photoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            photoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40)
+        ])
+        
+        /*
+        NSLayoutConstraint.activate([
+            emailTextField.topAnchor.constraint(equalTo: photoButton.bottomAnchor, constant: 20),
+            emailTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+            emailTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 40),
+            emailTextField.heightAnchor.constraint(equalToConstant: 50)
+        ])*/
 
+    }
 
 }
 

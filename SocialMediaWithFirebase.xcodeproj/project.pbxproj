@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		D4E5935C2066B0C1008C9504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5935B2066B0C1008C9504 /* AppDelegate.swift */; };
 		D4E5935E2066B0C1008C9504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5935D2066B0C1008C9504 /* ViewController.swift */; };
-		D4E593612066B0C1008C9504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E5935F2066B0C1008C9504 /* Main.storyboard */; };
 		D4E593632066B0C1008C9504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E593622066B0C1008C9504 /* Assets.xcassets */; };
 		D4E593662066B0C1008C9504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E593642066B0C1008C9504 /* LaunchScreen.storyboard */; };
+		D4E5936E2066B1CF008C9504 /* ConstrainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5936D2066B1CF008C9504 /* ConstrainHelper.swift */; };
+		D4E593722066BA58008C9504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E593712066BA58008C9504 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D4E593582066B0C1008C9504 /* SocialMediaWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5935B2066B0C1008C9504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E5935D2066B0C1008C9504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4E593602066B0C1008C9504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4E593622066B0C1008C9504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E593652066B0C1008C9504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E593672066B0C1008C9504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E5936D2066B1CF008C9504 /* ConstrainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainHelper.swift; sourceTree = "<group>"; };
+		D4E593712066BA58008C9504 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				D4E5935B2066B0C1008C9504 /* AppDelegate.swift */,
 				D4E5935D2066B0C1008C9504 /* ViewController.swift */,
-				D4E5935F2066B0C1008C9504 /* Main.storyboard */,
+				D4E593702066B1DC008C9504 /* Helpers */,
+				D4E5936F2066B1D5008C9504 /* Util */,
+			);
+			path = SocialMediaWithFirebase;
+			sourceTree = "<group>";
+		};
+		D4E5936F2066B1D5008C9504 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D4E5935B2066B0C1008C9504 /* AppDelegate.swift */,
+				D4E593712066BA58008C9504 /* Main.storyboard */,
 				D4E593622066B0C1008C9504 /* Assets.xcassets */,
 				D4E593642066B0C1008C9504 /* LaunchScreen.storyboard */,
 				D4E593672066B0C1008C9504 /* Info.plist */,
 			);
-			path = SocialMediaWithFirebase;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D4E593702066B1DC008C9504 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D4E5936D2066B1CF008C9504 /* ConstrainHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E593722066BA58008C9504 /* Main.storyboard in Resources */,
 				D4E593662066B0C1008C9504 /* LaunchScreen.storyboard in Resources */,
 				D4E593632066B0C1008C9504 /* Assets.xcassets in Resources */,
-				D4E593612066B0C1008C9504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,20 +157,13 @@
 			files = (
 				D4E5935E2066B0C1008C9504 /* ViewController.swift in Sources */,
 				D4E5935C2066B0C1008C9504 /* AppDelegate.swift in Sources */,
+				D4E5936E2066B1CF008C9504 /* ConstrainHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4E5935F2066B0C1008C9504 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4E593602066B0C1008C9504 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4E593642066B0C1008C9504 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,7 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFDXLZRBS4;
-				INFOPLIST_FILE = SocialMediaWithFirebase/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SocialMediaWithFirebase/Util/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericyu423.SocialMediaWithFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFDXLZRBS4;
-				INFOPLIST_FILE = SocialMediaWithFirebase/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SocialMediaWithFirebase/Util/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericyu423.SocialMediaWithFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
