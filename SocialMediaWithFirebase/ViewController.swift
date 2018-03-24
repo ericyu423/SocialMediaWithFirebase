@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
- 
-    private let heightPhotoButton:CGFloat = 150
+    //MARK:- declarations
+     private let heightPhotoButton:CGFloat = 150
     
      lazy var photoButton: UIButton = {
         var button = UIButton()
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
+        
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -70,63 +71,35 @@ class ViewController: UIViewController {
         return button
     }("Sign Up")
     
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(photoButton)
-        view.addSubview(emailTextField)
-        addAutoConstraintToSubviews()
-        
-    }
-
-    func addAutoConstraintToSubviews(){
-        
-        NSLayoutConstraint.activate([
-            photoButton.heightAnchor.constraint(equalToConstant: heightPhotoButton),
-            photoButton.widthAnchor.constraint(equalToConstant: heightPhotoButton),
-            photoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            photoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40)
-        ])
-        
-        setupInputFields()
-        
- 
-
-    }
-    
-    private func setupInputFields(){
-        /*
+    lazy var stackView:UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
-        stackView.spacing = 10*/
-        
-        
-        let stackView:UIStackView = {
-            let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            stackView.distribution = .fillEqually
-            stackView.axis = .vertical
-            stackView.spacing = 10
-            return stackView
-            
-        }()
-        
-        
-        view.addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: photoButton.bottomAnchor, constant: 20),
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
-            stackView.heightAnchor.constraint(equalToConstant: 200)
-            ])
-        
+        stackView.spacing = 10
+        return stackView
+    }()
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubViews()
     }
     
-    
+    func setupSubViews(){
+       
+        //MARK: PhotoButton
+        view.addSubview(photoButton)
+        photoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: heightPhotoButton, height: heightPhotoButton)
+        photoButton.anchorToCenter(x: view.centerXAnchor, y: nil, offsetX: 0, offsetY: 0, width: 0, height: 0)
+
+        //MARK: StackView
+        view.addSubview(stackView)
+        stackView.anchor(top: photoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: nil, height: 200)
+    }
+  
+      
 
 }
 
