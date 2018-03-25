@@ -17,6 +17,7 @@
 		D4E593762066F8F4008C9504 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E593752066F8F4008C9504 /* GoogleService-Info.plist */; };
 		D4E5937820681E60008C9504 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937720681E60008C9504 /* MainTabBarViewController.swift */; };
 		D4E5937A20681EAF008C9504 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937920681EAF008C9504 /* UserProfileController.swift */; };
+		D4E5937D206827E1008C9504 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937C206827E1008C9504 /* UserProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D4E593752066F8F4008C9504 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4E5937720681E60008C9504 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		D4E5937920681EAF008C9504 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		D4E5937C206827E1008C9504 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +88,10 @@
 		D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D4E5937B20682792008C9504 /* UserProfile */,
 				D4E5935D2066B0C1008C9504 /* ViewController.swift */,
-				D4E593702066B1DC008C9504 /* Helpers */,
 				D4E5936F2066B1D5008C9504 /* Util */,
+				D4E593702066B1DC008C9504 /* Helpers */,
 			);
 			path = SocialMediaWithFirebase;
 			sourceTree = "<group>";
@@ -98,7 +101,6 @@
 			children = (
 				D4E5935B2066B0C1008C9504 /* AppDelegate.swift */,
 				D4E5937720681E60008C9504 /* MainTabBarViewController.swift */,
-				D4E5937920681EAF008C9504 /* UserProfileController.swift */,
 				D4E593712066BA58008C9504 /* Main.storyboard */,
 				D4E593752066F8F4008C9504 /* GoogleService-Info.plist */,
 				D4E593622066B0C1008C9504 /* Assets.xcassets */,
@@ -114,6 +116,15 @@
 				D4E5936D2066B1CF008C9504 /* ConstrainHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D4E5937B20682792008C9504 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D4E5937920681EAF008C9504 /* UserProfileController.swift */,
+				D4E5937C206827E1008C9504 /* UserProfileHeader.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				D4E5935E2066B0C1008C9504 /* ViewController.swift in Sources */,
 				D4E5937820681E60008C9504 /* MainTabBarViewController.swift in Sources */,
 				D4E5935C2066B0C1008C9504 /* AppDelegate.swift in Sources */,
+				D4E5937D206827E1008C9504 /* UserProfileHeader.swift in Sources */,
 				D4E5937A20681EAF008C9504 /* UserProfileController.swift in Sources */,
 				D4E5936E2066B1CF008C9504 /* ConstrainHelper.swift in Sources */,
 			);
