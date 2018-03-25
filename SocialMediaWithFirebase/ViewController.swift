@@ -26,8 +26,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         button.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
-        
-        
+        button.layer.masksToBounds = true
+
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -123,33 +123,38 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         Auth.auth().createUser(withEmail: email, password: password) { (user, error ) in
             if let error = error { print("Failed to create user:",error)}
             print("Successfully created user:",user?.uid ?? "")
-            guard let uid = user?.uid else {return}
             
-            let another = ["layer":"saveSomethingElse"]
-            let dict = ["username":another]
-            let value = [uid: dict]
+
+            guard let image = self.photoButton.imageView?.image else { return }
             
-            // this is to go to database  /users/ folder
-            Database.database().reference().child("users").updateChildValues(value, withCompletionBlock: { (error, ref) in
+            guard let uploadData = UIImageJPEGRepresentation(image, 0.3) else {return} //30% original
+            let filename = UUID().uuidString
+            Storage.storage().reference().child("profile_images").child(filename).putData(uploadData, metadata: nil, completion: { (metadata, error) in
                 
                 if let error = error {
-                    print("failed to save user info to db",error)
+                    print("Failed to upload profil image:",error)
                     return
                 }
+                guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else {return}
+                print("Successfully uploaded profil image:",profileImageUrl)
                 
-                print("Successfully saved user info to db")
+                guard let uid = user?.uid else {return}
+                let dictValues = ["username":username,"profileImageUrl": profileImageUrl]
+                let value = [uid:dictValues]
                 
-              })//Database.database() ends
-            
-            
-            
-            
+                
+                Database.database().reference().child("users").updateChildValues(value, withCompletionBlock: { (error, ref) in
+                    
+                    if let error = error {
+                        print("failed to save user info to db",error)
+                        return
+                    }
+                    print("Successfully saved user info to db")
+                })//Database.database() ends
+            }) //storage().reference().child ends
         }//Auth.auth().createUser ends
-    
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubViews()
@@ -169,6 +174,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
 
 }
 
+
+//MARK: UIImagePickerControllerDelegate
 extension ViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -178,8 +185,6 @@ extension ViewController {
         } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             photoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
         }
-        
-        photoButton.layer.masksToBounds = true
         dismiss(animated: true, completion: nil)
     }
     
