@@ -72,6 +72,7 @@
 		D4E5934F2066B0C1008C9504 = {
 			isa = PBXGroup;
 			children = (
+				D4E5937E206AA071008C9504 /* README.rtf */,
 				D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */,
 				D4E593592066B0C1008C9504 /* Products */,
 				21E87759996CAFD7967CFFAA /* Pods */,
@@ -125,7 +126,6 @@
 			children = (
 				D4E5937920681EAF008C9504 /* UserProfileController.swift */,
 				D4E5937C206827E1008C9504 /* UserProfileHeader.swift */,
-				D4E5937E206AA071008C9504 /* README.rtf */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
