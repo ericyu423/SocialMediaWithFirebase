@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+            let loginVC = LoginViewController()
+                let navC = UINavigationController(rootViewController: loginVC)
+                self.present(navC, animated: true, completion: nil)
+            }
+        }
 
         //collection view needs to initialized with layout
         let layout = UICollectionViewFlowLayout()
@@ -24,9 +33,9 @@ class MainTabBarViewController: UITabBarController {
         
         tabBar.tintColor = .black
         
-        let loginVc = ViewController()
-        loginVc.view.backgroundColor = .white
-        viewControllers = [navController, loginVc]
+        let SignUpVC = SignUpViewController()
+        SignUpVC.view.backgroundColor = .white
+        viewControllers = [navController, SignUpVC]
     }
 
  

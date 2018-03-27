@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //MARK:- declarations
      private let heightPhotoButton:CGFloat = 150
     
@@ -77,6 +77,22 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         return button
     }("Sign Up")
     
+    let alreadyHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(string: "Already have an account ", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        
+        attributedTitle.append(NSMutableAttributedString(string: "Sign In", attributes:[NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor(red: 17/255, green: 154/255, blue: 237/255, alpha: 1)
+            ]))
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        
+        button.setTitle("Don't have an account?  Sign Up.", for: .normal)
+ 
+        button.addTarget(self, action: #selector(handleAlreadyHaveAccountTapped), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var stackView:UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,6 +101,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         stackView.spacing = 10
         return stackView
     }()
+    
+    @objc private func handleAlreadyHaveAccountTapped(){
+        navigationController?.popViewController(animated: true)
+    }
     
     @objc private func photoButtonClicked(){
         let imagePickerController = UIImagePickerController()
@@ -157,6 +177,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(alreadyHaveAccountButton)
+        
+        alreadyHaveAccountButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 50)
+        
+        view.backgroundColor = .white
         setupSubViews()
     }
     
@@ -165,7 +190,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         //MARK: PhotoButton
         view.addSubview(photoButton)
         
-        photoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 140, height: 140)
+        photoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: heightPhotoButton, height: heightPhotoButton)
         photoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
         //MARK: StackView
@@ -177,7 +202,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
 
 
 //MARK: UIImagePickerControllerDelegate
-extension ViewController {
+extension SignUpViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         
