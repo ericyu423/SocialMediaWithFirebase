@@ -164,12 +164,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
        
         //MARK: PhotoButton
         view.addSubview(photoButton)
-        photoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: heightPhotoButton, height: heightPhotoButton)
-        photoButton.anchorToCenter(x: view.centerXAnchor, y: nil, offsetX: 0, offsetY: 0, width: 0, height: 0)
+        
+        photoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 140, height: 140)
+        photoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
         //MARK: StackView
         view.addSubview(stackView)
-        stackView.anchor(top: photoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: nil, height: 200)
+        stackView.anchor(top: self.photoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: 0, height: 200)
     }
 
 }
