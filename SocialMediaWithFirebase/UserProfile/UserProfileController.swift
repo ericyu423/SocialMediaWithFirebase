@@ -76,10 +76,16 @@ extension UserProfileController {
             
             do { //signout throws
                 try Auth.auth().signOut()
+                let loginController = LoginViewController()
+                let navC = UINavigationController(rootViewController: loginController)
+                self.present(navC, animated: true, completion: nil)
+         
             } catch let err {
                 
                 print("failed to sign out:", err)
             }
+            
+            
             
             
             }))

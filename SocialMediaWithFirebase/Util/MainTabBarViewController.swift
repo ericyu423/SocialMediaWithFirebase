@@ -20,8 +20,14 @@ class MainTabBarViewController: UITabBarController {
                 let navC = UINavigationController(rootViewController: loginVC)
                 self.present(navC, animated: true, completion: nil)
             }
+            return
         }
 
+       setupViewControllers()
+    }
+    
+    //will be call to reset
+    internal func setupViewControllers(){
         //collection view needs to initialized with layout
         let layout = UICollectionViewFlowLayout()
         let userProfileController = UserProfileController(collectionViewLayout: layout)
@@ -40,14 +46,6 @@ class MainTabBarViewController: UITabBarController {
 
  
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

@@ -170,6 +170,12 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate, UI
                         return
                     }
                     print("Successfully saved user info to db")
+                    
+                    guard let mainTabBarController  = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarViewController else {return}
+                    
+                    mainTabBarController.setupViewControllers()
+                    self.dismiss(animated: true, completion: nil)
+                    
                 })//Database.database() ends
             }) //storage().reference().child ends
         }//Auth.auth().createUser ends
