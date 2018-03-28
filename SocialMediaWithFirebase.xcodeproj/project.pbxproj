@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47E521B16EF4F96A47D5C791 /* Pods_SocialMediaWithFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60045594A6191A16B76C2A71 /* Pods_SocialMediaWithFirebase.framework */; };
+		D458FC2B206C224100CE33E1 /* photoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FC2A206C224100CE33E1 /* photoSelectorController.swift */; };
 		D4E5935C2066B0C1008C9504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5935B2066B0C1008C9504 /* AppDelegate.swift */; };
 		D4E5935E2066B0C1008C9504 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5935D2066B0C1008C9504 /* SignUpViewController.swift */; };
 		D4E593632066B0C1008C9504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E593622066B0C1008C9504 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		60045594A6191A16B76C2A71 /* Pods_SocialMediaWithFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaWithFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F00AD998A07B01D3A56FB9B /* Pods-SocialMediaWithFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaWithFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaWithFirebase/Pods-SocialMediaWithFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		B07624258BC0EF3505168596 /* Pods-SocialMediaWithFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaWithFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaWithFirebase/Pods-SocialMediaWithFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		D458FC2A206C224100CE33E1 /* photoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoSelectorController.swift; sourceTree = "<group>"; };
 		D4E593582066B0C1008C9504 /* SocialMediaWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5935B2066B0C1008C9504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E5935D2066B0C1008C9504 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D458FC2C206C224A00CE33E1 /* AddPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				D458FC2A206C224100CE33E1 /* photoSelectorController.swift */,
+			);
+			path = AddPhoto;
+			sourceTree = "<group>";
+		};
 		D4E5934F2066B0C1008C9504 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D458FC2C206C224A00CE33E1 /* AddPhoto */,
 				D4E59380206AA7EB008C9504 /* Login */,
 				D4E5937B20682792008C9504 /* UserProfile */,
 				D4E5936F2066B1D5008C9504 /* Util */,
@@ -274,6 +285,7 @@
 				D4E5937D206827E1008C9504 /* UserProfileHeader.swift in Sources */,
 				D4E5937A20681EAF008C9504 /* UserProfileController.swift in Sources */,
 				D4E5936E2066B1CF008C9504 /* ConstrainHelper.swift in Sources */,
+				D458FC2B206C224100CE33E1 /* photoSelectorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
