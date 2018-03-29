@@ -21,7 +21,7 @@
 		D4E5937820681E60008C9504 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937720681E60008C9504 /* MainTabBarViewController.swift */; };
 		D4E5937A20681EAF008C9504 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937920681EAF008C9504 /* UserProfileController.swift */; };
 		D4E5937D206827E1008C9504 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937C206827E1008C9504 /* UserProfileHeader.swift */; };
-		D4E5937F206AA071008C9504 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4E5937E206AA071008C9504 /* README.rtf */; };
+		D4E5937F206AA071008C9504 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4E5937E206AA071008C9504 /* README.md */; };
 		D4E59382206AA810008C9504 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E59381206AA810008C9504 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		D4E5937720681E60008C9504 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		D4E5937920681EAF008C9504 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D4E5937C206827E1008C9504 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
-		D4E5937E206AA071008C9504 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		D4E5937E206AA071008C9504 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4E59381206AA810008C9504 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +90,7 @@
 		D4E5934F2066B0C1008C9504 = {
 			isa = PBXGroup;
 			children = (
-				D4E5937E206AA071008C9504 /* README.rtf */,
+				D4E5937E206AA071008C9504 /* README.md */,
 				D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */,
 				D4E593592066B0C1008C9504 /* Products */,
 				21E87759996CAFD7967CFFAA /* Pods */,
@@ -225,7 +225,7 @@
 				D4E593762066F8F4008C9504 /* GoogleService-Info.plist in Resources */,
 				D4E593662066B0C1008C9504 /* LaunchScreen.storyboard in Resources */,
 				D4E593632066B0C1008C9504 /* Assets.xcassets in Resources */,
-				D4E5937F206AA071008C9504 /* README.rtf in Resources */,
+				D4E5937F206AA071008C9504 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
