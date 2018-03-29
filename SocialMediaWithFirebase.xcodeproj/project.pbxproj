@@ -21,7 +21,6 @@
 		D4E5937820681E60008C9504 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937720681E60008C9504 /* MainTabBarViewController.swift */; };
 		D4E5937A20681EAF008C9504 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937920681EAF008C9504 /* UserProfileController.swift */; };
 		D4E5937D206827E1008C9504 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5937C206827E1008C9504 /* UserProfileHeader.swift */; };
-		D4E5937F206AA071008C9504 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4E5937E206AA071008C9504 /* README.md */; };
 		D4E59382206AA810008C9504 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E59381206AA810008C9504 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +30,7 @@
 		B07624258BC0EF3505168596 /* Pods-SocialMediaWithFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaWithFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaWithFirebase/Pods-SocialMediaWithFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		D43305C1206D49070097465D /* PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorCell.swift; sourceTree = "<group>"; };
 		D43305C3206D51E60097465D /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
+		D43305C5206D57B90097465D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D458FC2A206C224100CE33E1 /* PhotoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
 		D4E593582066B0C1008C9504 /* SocialMediaWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5935B2066B0C1008C9504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,6 @@
 		D4E5937720681E60008C9504 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		D4E5937920681EAF008C9504 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D4E5937C206827E1008C9504 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
-		D4E5937E206AA071008C9504 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4E59381206AA810008C9504 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +89,7 @@
 		D4E5934F2066B0C1008C9504 = {
 			isa = PBXGroup;
 			children = (
-				D4E5937E206AA071008C9504 /* README.md */,
+				D43305C5206D57B90097465D /* README.md */,
 				D4E5935A2066B0C1008C9504 /* SocialMediaWithFirebase */,
 				D4E593592066B0C1008C9504 /* Products */,
 				21E87759996CAFD7967CFFAA /* Pods */,
@@ -225,7 +224,6 @@
 				D4E593762066F8F4008C9504 /* GoogleService-Info.plist in Resources */,
 				D4E593662066B0C1008C9504 /* LaunchScreen.storyboard in Resources */,
 				D4E593632066B0C1008C9504 /* Assets.xcassets in Resources */,
-				D4E5937F206AA071008C9504 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
