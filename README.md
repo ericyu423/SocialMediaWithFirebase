@@ -7,5 +7,5 @@ app with chat and image sharing features.
 
 Deadline: April 15
 
-49 lectures, 14 complete  3/29
+49 lectures, 16 completed 
 
